@@ -1,0 +1,18 @@
+import requests, random, sys
+
+def main():
+  URL = input("\nAnthPackets:$ URL: ")
+  Counter1 = 1
+  UA_Array = ["Anthrox owns your ass","Nice job, skid","Fuck your grabify","SpoopyAgents with Anthrox!","EAT MY PICKLE NIPPLES -Anthrox","I JUST SHAT MYSELF","YOU LOSE","Silly boy, grabify is for skids!","IMMA FIRIN MUH LAZER"]
+  Eternal = 0
+  while Eternal <1:
+      RandomUA = random.choice(UA_Array)
+      try:
+        requests.get(URL,headers={"user-agent": RandomUA})
+      except:
+        print("Re-direct not valid, sent http request anyways lmao")
+      print('Sent!', Counter1)
+      sys.stdout.write("\033")
+      Counter1 = Counter1 + 1
+
+main()
